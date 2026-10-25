@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 85px;
+  /* Brand background: warm linen (was plain white) */
+  background-color: #f5f2ec;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ---- APNA FASHION WORLD theme polish ---- */
+
+/* Warm highlight matching the linen background */
+::selection {
+  background: #e9dfc8;
+  color: #1a1a1a;
+}
+
+/* Slim, unobtrusive scrollbar in theme colors */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #efeae0;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6cbb8;
+  border-radius: 8px;
+  border: 2px solid #efeae0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c4b7a1;
+}
+
+/* Soft image hover on product cards */
+img {
+  transition: filter 0.25s ease;
+}
+
+/* Header search placeholder on dark navbar */
+input[placeholder="Search APNA FASHION WORLD"]::placeholder {
+  color: rgba(232, 226, 214, 0.75);
+}
+
+/* Dropdown (Shop By / Categories) menu: white panel needs dark readable text.
+   Header ke cream text inherit hone se ye illegible ho raha tha. */
+.chakra-menu__menu-list,
+.chakra-menu__menu-list * {
+  color: #1a1a1a !important;
+}
+
+/* Red frame on the 5 hero-carousel banner images (same style as the AJIO scallop banner).
+   The ClearanceSale hero banner already has a baked-in scalloped frame, so it is excluded. */
+img[src*="assets.ajio.com/cms/AJIO/WEB/24022023-UHP-D-MainBanner-"] {
+  border: 10px solid #d6242e !important;
+  border-radius: 8px;
+  /* inner dotted stitching detail like the original banner */
+  outline: 3px dotted rgba(255, 255, 255, 0.95);
+  outline-offset: -17px;
+}

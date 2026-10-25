@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 150" role="img" aria-label="APNA FASHION WORLD">
+  <!-- Light variant for dark backgrounds (navbar header) -->
+  <g stroke="#f5f1e8" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- hook -->
+    <path d="M228 22 a9 9 0 1 1 18 0" />
+    <!-- hanger body -->
+    <path d="M237 24 L204 44 L270 44 Z" />
+  </g>
+  <!-- top rule -->
+  <line x1="16" y1="52" x2="424" y2="52" stroke="#f5f1e8" stroke-width="3" />
+  <!-- brand text -->
+  <text
+    x="220"
+    y="100"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="600"
+    font-size="27"
+    letter-spacing="2.5"
+    fill="#f5f1e8"
+  >APNA FASHION WORLD</text>
+  <!-- bottom rule -->
+  <line x1="16" y1="122" x2="424" y2="122" stroke="#f5f1e8" stroke-width="3" />
+</svg>
