@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/index.js": {
-      "includeFiles": ["database.js", "models/**", "routes/**", "middleware/**"]
+      "includeFiles": "database.js,models/**,routes/**,middleware/**"
     }
   },
   "rewrites": [
