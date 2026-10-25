@@ -20,7 +20,8 @@
     "mongoose": "^8.16.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "vercel": "^65.2.0"
   },
   "allowScripts": {
     "bcrypt@6.0.0": true
