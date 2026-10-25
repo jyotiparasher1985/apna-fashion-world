@@ -111,7 +111,10 @@ const MobileNav = () => {
                       </ModalFooter>
                     </ModalContent>
                   </Modal>
-                </Box> : <Link to="/login" ><Button colorScheme='green'>Login</Button></Link>}
+                </Box> : <Flex gap="8px">
+                  <Link to="/login" ><Button colorScheme='green' size="sm">Login</Button></Link>
+                  <Link to="/signup" ><Button colorScheme='yellow' size="sm">SignUp</Button></Link>
+                </Flex>}
               </Box>}
 
           />

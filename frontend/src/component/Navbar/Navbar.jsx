@@ -83,7 +83,10 @@ const Navbar = ({ cartlength }) => {
                     </ModalFooter>
                   </ModalContent>
                 </Modal>
-              </Box> : <Link to="/login" ><Button colorScheme='green'>SignIn</Button></Link>}
+              </Box> : <Flex gap="10px">
+                <Link to="/login" ><Button colorScheme='green' size="sm">SignIn</Button></Link>
+                <Link to="/signup" ><Button colorScheme='yellow' size="sm">SignUp</Button></Link>
+              </Flex>}
             </Box>
           </Flex>
           {/* category */}

@@ -160,7 +160,12 @@ export default function SimpleCard() {
                 >
                   Log In
                 </Button>
-                <Link to="/signup">New User? Signup</Link>
+                <Text align={"center"} fontSize="lg">
+                  New user?{" "}
+                  <Link to="/signup" fontWeight="bold" color="orange.400" _hover={{ color: "orange.500" }}>
+                    Create Account → Sign Up
+                  </Link>
+                </Text>
                 {error && <p>{error}</p>}
               </Stack>
             </Stack>
