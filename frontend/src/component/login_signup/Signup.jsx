@@ -35,49 +35,6 @@ export default function SignupCard() {
   // const [data, setdata] = useState([]);
 
   const handleSignup = () => {
-    // if (name && email && password) {
-    //   axios
-    //     .post(`https://smiling-wear-pig.cyclic.app/auth/register`, {
-    //       name: name,
-    //       email: email,
-    //       password: password,
-    //     })
-    //     .then((res) => {
-    //       console.log(res);
-    //       toast({
-    //         title: `SignIn Successfull`,
-    //         position: "top",
-    //         status: "success",
-    //         duration: 2000,
-    //         isClosable: true,
-    //       });
-    //       navigate("/login")
-    //     })
-    //     .catch((err) => {
-    //       toast({
-    //         title: `Something Went Wrong`,
-    //         position: "top",
-    //         status: "error",
-    //         duration: 2000,
-    //         isClosable: true,
-    //       });
-    //     });
-    // } else {
-    //   toast({
-    //     title: `Something Went Wrong`,
-    //     position: "top",
-    //     status: "error",
-    //     duration: 2000,
-    //     isClosable: true,
-    //   });
-    // }
-    // setEmail("");
-    // setName("");
-    // setPassword("");
-
-    // navigate("/login");
-    // window.location.href = "/login";
-    // console.log(user);
     const payload = {
       name: name,
       email: email,
@@ -85,24 +42,43 @@ export default function SignupCard() {
     }
     if (name && email && password) {
 
-      fetch("${API_BASE}/auth/register", {
+      fetch(`${API_BASE}/auth/register`, {
         method: "POST",
         headers: {
           "Content-type": "application/json"
         },
         body: JSON.stringify(payload)
       })
-        .then(res => { res.json() })
-        // .then(res => console.log(res))
-        // .catch(err => console.log(err))
-      toast({
-        title: `SignIn Successfull`,
-        position: "top",
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-      });
-      navigate("/login")
+        .then(async (res) => {
+          const data = await res.json().catch(() => ({}));
+          if (res.ok) {
+            toast({
+              title: `Account created! Please login`,
+              position: "top",
+              status: "success",
+              duration: 2000,
+              isClosable: true,
+            });
+            navigate("/login");
+          } else {
+            toast({
+              title: data.msg || "Signup failed, try again",
+              position: "top",
+              status: "error",
+              duration: 2000,
+              isClosable: true,
+            });
+          }
+        })
+        .catch(() => {
+          toast({
+            title: `Something Went Wrong`,
+            position: "top",
+            status: "error",
+            duration: 2000,
+            isClosable: true,
+          });
+        });
     } else {
       toast({
         title: `Feilds cannot  be empty`,
