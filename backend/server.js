@@ -15,14 +15,19 @@ app.use("/cart", cartRoute);
 app.use("/wishlist", wishlistRoute);
 app.use("/auth", authRoute);
 
-const PORT = process.env.PORT || 4000;
+// Vercel serverless ke liye app export (vercel.json -> @vercel/node)
+module.exports = app;
 
-app.listen(PORT, async () => {
-  try {
-    await connection;
-    console.log("Connected to Database");
-  } catch (err) {
-    // console.log(err);
-  }
-  console.log(`Server Running at ${PORT} Port`);
-});
+// Local run (node server.js / npm start) par hi listen karo
+const PORT = process.env.PORT || 4000;
+if (require.main === module) {
+  app.listen(PORT, async () => {
+    try {
+      await connection;
+      console.log("Connected to Database");
+    } catch (err) {
+      // console.log(err);
+    }
+    console.log(`Server Running at ${PORT} Port`);
+  });
+}
