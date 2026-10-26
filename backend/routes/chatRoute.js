@@ -18,19 +18,19 @@ const replies = [
   { keywords: ["original", "quality", "authentic", "genuine", "fabric quality"], reply: "Bilkul, hum fabric quality aur finishing par vishesh dhyan dete hain taaki aapko behtareen comfort aur durable kapde milein." },
 
   // Sizing & Fitting
-  { keywords: ["size guide", "sahi size", "size chart", "measurement", "chest", "waist", "length"], reply: "Har product page par ek standard Size Chart (S, M, L, XL, XXL) chest, waist aur length measurements ke sath di gayi hai. Agar aap do sizes ke beech me confuse hain, toh ek size bada chunna behtar rehta hai." },
+  { keywords: ["size", "sizes", "size guide", "sahi size", "size chart", "measurement", "chest", "waist", "length", "fit", "fitting"], reply: "Har product page par ek standard Size Chart (S, M, L, XL, XXL) chest, waist aur length measurements ke sath di gayi hai. Agar aap do sizes ke beech me confuse hain, toh ek size bada chunna behtar rehta hai." },
   { keywords: ["alteration", "customized fitting", "fitting", "stitch", "tailor"], reply: "Haan, agar aap hamare offline store se visit karte hain ya local delivery lete hain, toh basic alteration suvidha uplabdh karwayi jaati hai." },
   { keywords: ["plus size", "3xl", "4xl", "xxl", "big size", "large size"], reply: "Select categories aur specific designs me plus-size options uplabdh hain. Aap filter me apna required size select karke dekh sakte hain." },
 
   // Orders & Payment
   { keywords: ["order kaise", "place order", "order place", "kaise order", "order karen"], reply: "Apna pasandida item chunein -> Sahi size aur color select karein -> Add to Cart karein -> Checkout par click karke shipping address bharein aur payment complete karein." },
-  { keywords: ["payment options", "payment methods", "upi", "net banking", "debit card", "credit card"], reply: "Hum UPI (Google Pay, PhonePe, Paytm), Net Banking, Debit/Credit Cards aur eligible locations ke liye Cash on Delivery (COD) accept karte hain." },
+  { keywords: ["payment", "pay", "payment options", "payment methods", "upi", "net banking", "debit card", "credit card"], reply: "Hum UPI (Google Pay, PhonePe, Paytm), Net Banking, Debit/Credit Cards aur eligible locations ke liye Cash on Delivery (COD) accept karte hain." },
   { keywords: ["cod", "cash on delivery"], reply: "Haan, adhiktam pincodes par Cash on Delivery ki suvidha uplabdh hai. Kuch items par nominal COD confirmation lag sakti hai." },
   { keywords: ["payment failed", "payment kat gaya", "amount deducted", "order confirm nahi", "transaction id"], reply: "Ghabrayein nahi. Bank server issue ki wajah se agar amount deduct ho gaya hai toh 24 se 48 ghante me auto-refund ho jata hai ya order update ho jata hai. Turant madad ke liye transaction ID hamare WhatsApp support par bhejein." },
 
   // Shipping, Delivery & Tracking
-  { keywords: ["kitne din", "delivery time", "deliver hoga", "kab milega", "shipping time"], reply: "Standard delivery me aamtaur par 3 se 7 working days lagte hain (aapke location aur pincode par nirbhar karta hai). Local orders 24 se 48 ghante me deliver ho jate hain." },
-  { keywords: ["track", "tracking", "order status", "awb", "tracking link"], reply: "Order dispatch hote hi aapko SMS/WhatsApp par tracking link aur AWB number mil jata hai. Aap website ke 'Track Order' section me jakar apna tracking number daal kar live status dekh sakte hain." },
+  { keywords: ["delivery", "shipping", "ship", "deliver", "kitne din", "delivery time", "deliver hoga", "kab milega", "shipping time"], reply: "Standard delivery me aamtaur par 3 se 7 working days lagte hain (aapke location aur pincode par nirbhar karta hai). Local orders 24 se 48 ghante me deliver ho jate hain." },
+  { keywords: ["track", "tracking", "order", "order status", "awb", "tracking link"], reply: "Order dispatch hote hi aapko SMS/WhatsApp par tracking link aur AWB number mil jata hai. Aap website ke 'Track Order' section me jakar apna tracking number daal kar live status dekh sakte hain." },
   { keywords: ["delivery charges", "shipping charge", "free delivery", "delivery fee"], reply: "Ek nishchit cart value (jaise Rs. 999 ya usse upar) par delivery bilkul FREE rehti hai. Usse kam ke orders par standard shipping charge lagta hai." },
 
   // Returns, Exchange & Refund
