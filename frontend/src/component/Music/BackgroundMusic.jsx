@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
-// Light mall-style background music (bright welcoming — Kevin MacLeod)
+// Light mall-style background music (bright welcoming - Kevin MacLeod)
 // Baaki options (swap karne ke liye):
-//   Wholesome.mp3   — soft warm ukulele
-//   Carefree.mp3    — breezy happy
-//   Beach%20Bum.mp3 — sunny beach vibe
-//   Smooth%20Lovin.mp3 — smooth lounge
+//   Wholesome.mp3   - soft warm ukulele
+//   Carefree.mp3    - breezy happy
+//   Beach%20Bum.mp3 - sunny beach vibe
+//   Smooth%20Lovin.mp3 - smooth lounge
 const TRACK =
   "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Life%20of%20Riley.mp3";
 
