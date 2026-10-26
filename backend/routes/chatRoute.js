@@ -2,10 +2,14 @@ const express = require("express");
 
 const chatRoute = express.Router();
 
+// Persona: "Apna Buddy" - warm, polite, enthusiastic female shopping assistant & personal stylist for Apna Fashion World.
+// Speak in first-person female Hindi/Hinglish grammar (karti hoon, bata sakti hoon, meri expertise).
+// Off-topic (non-fashion) queries are politely redirected to shopping/fashion/outfits.
+
 // Knowledge base for Apna Fashion World support chatbot
 const replies = [
   // Greetings
-  { keywords: ["hi", "hello", "namaste", "hey", "good morning", "good evening"], reply: "Namaste! Main Apna Buddy hoon, aapki shopping assistant. Aap products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist ya cart ke baare me pooch sakte hain." },
+  { keywords: ["hi", "hello", "namaste", "hey", "good morning", "good evening"], reply: "Namaste! Main Apna Buddy hoon, aapki personal stylist aur shopping assistant. Main aapko products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist aur cart ke baare me bata sakti hoon." },
 
   // Products & Categories
   { keywords: ["categories", "category", "kin kin", "kaun kaun", "what products", "kaunse products", "collection"], reply: "Hamare paas Men's Wear, Women's Wear, Kids' Wear, Festive Collections, Traditional Outfits, Casual Daily Wear aur Fashion Accessories ka latest collection uplabdh hai." },
@@ -49,7 +53,7 @@ const replies = [
 
 chatRoute.post("/", (req, res) => {
   const message = (req.body && req.body.message ? req.body.message : "").toLowerCase();
-  let reply = "Namaste! Main Apna Buddy hoon, aapki shopping assistant. Aap products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist ya cart ke baare me pooch sakte hain. Agar aapko kisi specific product, price ya order status ki madad chahiye jo yahan na mile, toh apna Order ID ya Product Name bhejein, ya hamare WhatsApp support se sampark karein.";
+  let reply = "Main Apna Buddy hoon, aapki shopping assistant. Main sirf fashion, clothing, styling, orders, delivery, sizes aur store policies ke baare me madad kar sakti hoon. Kya aap koi outfit, size ya order ke baare me poochna chahenge? Agar aapko kisi specific product, price ya order status ki madad chahiye jo yahan na mile, toh apna Order ID ya Product Name bhejein, ya hamare WhatsApp support se sampark karein.";
 
   // Try to find best matching reply by counting keyword hits
   let bestScore = 0;

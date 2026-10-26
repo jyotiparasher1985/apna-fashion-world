@@ -8,7 +8,7 @@ const Chatbot = () => {
     {
       id: 1,
       role: 'assistant',
-      text: 'Namaste! Main Apna Buddy hoon, aapki shopping assistant. Products, orders, delivery, returns ya size ke baare me poochhein.'
+      text: 'Namaste! Main Apna Buddy hoon, aapki personal stylist aur shopping assistant. Main aapko products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist aur cart ke baare me bata sakti hoon.'
     }
   ]);
   const [input, setInput] = useState('');
