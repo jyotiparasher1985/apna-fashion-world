@@ -1,9 +1,12 @@
-# feigned-copper-2423
-# Project Title : Fashion Flare (Ajio.com Clone) Website
+# APNA FASHION WORLD
 
-This repo is the clone of ajio.com website,AJIO is a shopping and lifestyle brand which is the ultimate destination for the latest fashion styles that are handpicked and are available at the best price that one can find anywhere. 
+APNA FASHION WORLD is a fashion e-commerce web app (Ajio.com inspired) rebranded for the "Apna Fashion World" store. It includes a React + Vite frontend, an Express + MongoDB backend, Redux state management, Chakra UI, and Firebase Hosting + Vercel deployment.
 
-Deployed Link : https://frontend-ivory-tau.vercel.app/
+## Live Links
+
+- Frontend (Firebase Hosting): https://apnafashionworld.web.app
+- Backend (Vercel): https://apna-fashion-backend.vercel.app
+- Source Code (GitHub): https://github.com/kanhaji143/apna-fashion-world
 
 ### * Tech Stack
 
