@@ -108,6 +108,13 @@
   font-size: 13.5px;
   line-height: 1.45;
   word-break: break-word;
+  white-space: pre-line;
+}
+
+.chat-bubble a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .chat-bubble.user {

@@ -1,2 +1,8 @@
 
 frontend/.firebase/
+
+node_modules/
+.env
+*.log
+*.err
+dist/

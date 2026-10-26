@@ -2,14 +2,40 @@ import React, { useState, useRef, useEffect } from 'react';
 import './Chatbot.css';
 import { API_BASE } from '../../api';
 
+const WELCOME =
+  "नमस्ते! 👋 Welcome to Apna Fashion World!\n\n" +
+  "मैं आपका shopping assistant हूँ। 😊\n\n" +
+  "मैं आपकी मदद कर सकता हूँ:\n" +
+  "- 👗 Products और latest collection खोजने में\n" +
+  "- 💰 Price, size और colour की जानकारी पाने में\n" +
+  "- 🛍️ Order और payment से जुड़े सवालों में\n" +
+  "- 🚚 Delivery, cancellation, return और refund की जानकारी में\n" +
+  "- 🙋 Customer support तक पहुँचने में\n\n" +
+  "बताइए, मैं आपकी क्या मदद कर सकता हूँ?";
+
+// Render plain text with clickable URLs.
+const renderText = (text) => {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = String(text || '').split(urlRegex);
+  return parts.map((part, i) => {
+    if (urlRegex.test(part)) {
+      // reset lastIndex (global regex state)
+      urlRegex.lastIndex = 0;
+      return (
+        <a key={i} href={part} target="_blank" rel="noopener noreferrer">
+          {part}
+        </a>
+      );
+    }
+    urlRegex.lastIndex = 0;
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+};
+
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    {
-      id: 1,
-      role: 'assistant',
-      text: 'Namaste! Main Apna Buddy hoon, aapki personal stylist aur shopping assistant. Main aapko products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist aur cart ke baare me bata sakti hoon.'
-    }
+    { id: 1, role: 'assistant', text: WELCOME }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -93,7 +119,7 @@ const Chatbot = () => {
             {messages.map((msg) => (
               <div key={msg.id} className={`chat-bubble-row ${msg.role}`}>
                 <div className={`chat-bubble ${msg.role}`}>
-                  {msg.text}
+                  {renderText(msg.text)}
                 </div>
               </div>
             ))}
