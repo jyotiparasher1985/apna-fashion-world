@@ -8,7 +8,7 @@ const Chatbot = () => {
     {
       id: 1,
       role: 'assistant',
-      text: 'Namaste! Main Apna Fashion World support assistant hoon. Products, orders, delivery, returns ya size ke baare me poochhein.'
+      text: 'Namaste! Main Apna Buddy hoon, aapki shopping assistant. Products, orders, delivery, returns ya size ke baare me poochhein.'
     }
   ]);
   const [input, setInput] = useState('');
@@ -74,7 +74,7 @@ const Chatbot = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Chat"
       >
-        {isOpen ? '✕' : '💬'}
+        {isOpen ? '✕' : '👩'}
       </button>
 
       {isOpen && (
@@ -82,7 +82,7 @@ const Chatbot = () => {
           <div className="chatbot-header">
             <div className="chatbot-title">
               <span className="status-dot"></span>
-              <h4>Apna Support Assistant</h4>
+              <h4>Apna Buddy</h4>
             </div>
             <button className="chatbot-close-icon" onClick={() => setIsOpen(false)}>
               ✕

@@ -5,7 +5,7 @@ const chatRoute = express.Router();
 // Knowledge base for Apna Fashion World support chatbot
 const replies = [
   // Greetings
-  { keywords: ["hi", "hello", "namaste", "hey", "good morning", "good evening"], reply: "Namaste! Main Apna Fashion World support assistant hoon. Aap products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist ya cart ke baare me pooch sakte hain." },
+  { keywords: ["hi", "hello", "namaste", "hey", "good morning", "good evening"], reply: "Namaste! Main Apna Buddy hoon, aapki shopping assistant. Aap products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist ya cart ke baare me pooch sakte hain." },
 
   // Products & Categories
   { keywords: ["categories", "category", "kin kin", "kaun kaun", "what products", "kaunse products", "collection"], reply: "Hamare paas Men's Wear, Women's Wear, Kids' Wear, Festive Collections, Traditional Outfits, Casual Daily Wear aur Fashion Accessories ka latest collection uplabdh hai." },
@@ -49,7 +49,7 @@ const replies = [
 
 chatRoute.post("/", (req, res) => {
   const message = (req.body && req.body.message ? req.body.message : "").toLowerCase();
-  let reply = "Namaste! Main Apna Fashion World support assistant hoon. Aap products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist ya cart ke baare me pooch sakte hain. Agar aapko kisi specific product, price ya order status ki madad chahiye jo yahan na mile, toh apna Order ID ya Product Name bhejein, ya hamare WhatsApp support se sampark karein.";
+  let reply = "Namaste! Main Apna Buddy hoon, aapki shopping assistant. Aap products, orders, delivery, returns, payment, size, coupon, offers, account, wishlist ya cart ke baare me pooch sakte hain. Agar aapko kisi specific product, price ya order status ki madad chahiye jo yahan na mile, toh apna Order ID ya Product Name bhejein, ya hamare WhatsApp support se sampark karein.";
 
   // Try to find best matching reply by counting keyword hits
   let bestScore = 0;
