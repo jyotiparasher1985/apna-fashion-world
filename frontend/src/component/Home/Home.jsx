@@ -64,7 +64,34 @@ function Home() {
 
       <Box style={{ margin: "auto" }}>
         <Image style={{ width: "100vw" }} src="https://assets.ajio.com/cms/AJIO/WEB/D1-1440x90-11.jpg" />
-        <Image style={{ width: "100vw" }} src="https://assets.ajio.com/cms/AJIO/WEB/IDBI-1440x128-23.jpg" />
+        {/* HDFC BANK OFFER BANNER (IDBI ki jagah) */}
+        <div style={{ width: "100%", background: "#fff", display: "flex", alignItems: "center", padding: "18px 4%", boxSizing: "border-box" }}>
+          <div style={{ minWidth: "200px", textAlign: "center" }}>
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/HDFC-Bank-Logo.svg?width=420"
+              alt="HDFC BANK"
+              style={{ width: "210px", maxWidth: "100%", display: "block", margin: "0 auto" }}
+            />
+            <div style={{ fontSize: "14px", fontWeight: 800, color: "#004c8f", letterSpacing: "2px", marginTop: "6px" }}>
+              HDFC BANK
+            </div>
+            <div style={{ fontSize: "11px", color: "#555", fontWeight: 600, marginTop: "2px", fontStyle: "italic" }}>
+              We Understand Your World
+            </div>
+          </div>
+          <div style={{ width: "1px", background: "#999", alignSelf: "stretch", margin: "0 28px" }}></div>
+          <div style={{ flex: 1, textAlign: "center" }}>
+            <div style={{ fontSize: "clamp(14px, 1.6vw, 22px)", fontWeight: 800, color: "#0e7a4e", letterSpacing: "0.5px" }}>
+              GET&nbsp; 10% INSTANT DISCOUNT<sup>*</sup> ON HDFC BANK DEBIT &amp; CREDIT CARDS
+            </div>
+            <div style={{ fontSize: "13px", fontWeight: 600, color: "#222", marginTop: "4px" }}>
+              (*MIN. TRANSACTION: ₹2499 | MAX DISCOUNT: ₹500)
+            </div>
+            <div style={{ fontSize: "12px", fontWeight: 800, color: "#f26a21", marginTop: "6px", cursor: "pointer" }}>
+              CLICK TO KNOW MORE&gt;
+            </div>
+          </div>
+        </div>
         <Image style={{ width: "100vw" }} src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-ASS-Teaser-Strip.gif" />
         <Image style={{ width: "100vw" }} src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-ASS-Teaser-HalfbannerRevised%20.gif" />
         <Image style={{ width: "100vw" }} src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SpecieUpYourBrandGame-SectionheaderStrip.jpg" />
