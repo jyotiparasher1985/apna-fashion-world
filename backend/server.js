@@ -4,6 +4,7 @@ const { productRoute } = require("./routes/productRoute");
 const { cartRoute } = require("./routes/cartRoute");
 const { wishlistRoute } = require("./routes/wishlistRoute");
 const { authRoute } = require("./routes/auth.Route");
+const { chatRoute } = require("./routes/chatRoute");
 
 
 const cors = require("cors");
@@ -14,6 +15,7 @@ app.use("/product", productRoute);
 app.use("/cart", cartRoute);
 app.use("/wishlist", wishlistRoute);
 app.use("/auth", authRoute);
+app.use("/chat", chatRoute);
 
 // Vercel serverless ke liye app export (vercel.json -> @vercel/node)
 module.exports = app;
